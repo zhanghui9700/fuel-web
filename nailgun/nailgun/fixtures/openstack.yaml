@@ -1093,7 +1093,7 @@
             weight: 30
             type: "hidden"
           libvirt_type:
-            value: "qemu"
+            value: "kvm"
             values:
               - data: "kvm"
                 label: "KVM"
@@ -1786,7 +1786,7 @@
       - name: hypervisor:qemu
         default: true
         bind: !!pairs
-          - "settings:common.libvirt_type.value": "qemu"
+          - "settings:common.libvirt_type.value": "kvm"
         weight: 5
         label: "dialog.create_cluster_wizard.compute.qemu"
         description: "dialog.create_cluster_wizard.compute.qemu_description"
@@ -2379,6 +2379,7 @@
               vim
               virt-what
               vlan
+              xcloud-init
       generated:
         repo_setup:
           installer_kernel:
